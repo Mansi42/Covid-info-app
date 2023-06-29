@@ -1,0 +1,251 @@
+{
+  "regUsers": [
+    {
+      "name": null,
+      "email": null,
+      "password": null,
+      "gender": null,
+      "dob": null,
+      "address": null,
+      "phoneNumber": null,
+      "id": 1
+    },
+    {
+      "name": null,
+      "email": null,
+      "password": null,
+      "gender": null,
+      "dob": null,
+      "address": null,
+      "phoneNumber": null,
+      "id": 2
+    },
+    {
+      "name": "mansi",
+      "email": "mdhingra@bebotechnologies.com",
+      "password": "adwewewq",
+      "gender": "Female",
+      "dob": "2023-05-03T18:30:00.000Z",
+      "address": "wdd",
+      "phoneNumber": 3435632211,
+      "id": 3
+    },
+    {
+      "name": "ritika",
+      "email": "ritika@gmail.com",
+      "password": "ritika123",
+      "gender": "Female",
+      "dob": "2023-05-31T18:30:00.000Z",
+      "address": "hoshiarpur",
+      "phoneNumber": 3455784324,
+      "id": 4
+    },
+    {
+      "name": "shiffali",
+      "email": "shiffali@gmail.com",
+      "password": "shiffali@123",
+      "gender": "Female",
+      "dob": "2023-04-11T18:30:00.000Z",
+      "address": "hoshiarpur",
+      "phoneNumber": 9832567613,
+      "id": 5
+    },
+    {
+      "name": null,
+      "email": null,
+      "password": null,
+      "gender": null,
+      "dob": null,
+      "address": null,
+      "phoneNumber": null,
+      "id": 6
+    },
+    {
+      "name": "mansi",
+      "email": "mansi@123gmail.com",
+      "password": "mansi@123",
+      "gender": "Female",
+      "dob": "2023-05-07T18:30:00.000Z",
+      "address": "garhdiwala",
+      "phoneNumber": 9837248764,
+      "id": 7
+    },
+    {
+      "name": "shruti",
+      "email": "s@123gmail.com",
+      "password": "mansi@123",
+      "gender": "Female",
+      "dob": "2023-05-07T18:30:00.000Z",
+      "address": "garhdiwala",
+      "phoneNumber": 9837248764,
+      "id": 8
+    },
+    {
+      "name": "shruti",
+      "email": "shruti@gmail.com",
+      "password": "shruti123",
+      "gender": "Female",
+      "dob": "2023-05-16T18:30:00.000Z",
+      "address": "garhdiwala",
+      "phoneNumber": 3456789876,
+      "id": 10
+    },
+    {
+      "name": null,
+      "email": null,
+      "password": null,
+      "gender": null,
+      "dob": null,
+      "address": null,
+      "phoneNumber": null,
+      "id": 11
+    },
+    {
+      "name": null,
+      "email": null,
+      "password": null,
+      "gender": null,
+      "dob": null,
+      "address": null,
+      "phoneNumber": null,
+      "id": 12
+    },
+    {
+      "name": null,
+      "email": null,
+      "password": null,
+      "gender": null,
+      "dob": null,
+      "address": null,
+      "phoneNumber": null,
+      "id": 13
+    },
+    {
+      "name": null,
+      "email": null,
+      "password": null,
+      "gender": null,
+      "dob": null,
+      "address": null,
+      "phoneNumber": null,
+      "id": 14
+    },
+    {
+      "name": null,
+      "email": null,
+      "password": null,
+      "gender": null,
+      "dob": null,
+      "address": null,
+      "phoneNumber": null,
+      "id": 15
+    },
+    {
+      "name": null,
+      "email": null,
+      "password": null,
+      "gender": null,
+      "dob": null,
+      "address": null,
+      "phoneNumber": null,
+      "id": 16
+    },
+    {
+      "name": null,
+      "email": null,
+      "password": null,
+      "gender": null,
+      "dob": null,
+      "address": null,
+      "phoneNumber": null,
+      "id": 17
+    },
+    {
+      "name": null,
+      "email": null,
+      "password": null,
+      "gender": null,
+      "dob": null,
+      "address": null,
+      "phoneNumber": null,
+      "id": 18
+    },
+    {
+      "name": null,
+      "email": null,
+      "password": null,
+      "gender": null,
+      "dob": null,
+      "address": null,
+      "phoneNumber": null,
+      "id": 19
+    },
+    {
+      "name": null,
+      "email": null,
+      "password": null,
+      "gender": null,
+      "dob": null,
+      "address": null,
+      "phoneNumber": null,
+      "id": 20
+    },
+    {
+      "name": null,
+      "email": null,
+      "password": null,
+      "gender": null,
+      "dob": null,
+      "address": null,
+      "phoneNumber": null,
+      "id": 21
+    },
+    {
+      "name": null,
+      "email": null,
+      "password": null,
+      "gender": null,
+      "dob": null,
+      "address": null,
+      "phoneNumber": null,
+      "id": 22
+    },
+    {
+      "name": "karan",
+      "email": "karan@gmail.com",
+      "password": "karan123",
+      "gender": "Male",
+      "dob": "2023-05-01T18:30:00.000Z",
+      "address": "garh",
+      "phoneNumber": 7634565427,
+      "id": 23
+    },
+    {
+      "name": "mansi",
+      "email": "mdhingra@bebotechnologies.com",
+      "password": "gbfbfvgbf",
+      "gender": "Female",
+      "dob": "2023-05-18T18:30:00.000Z",
+      "address": "rgfhdg",
+      "phoneNumber": 5467576865,
+      "id": 24
+    },
+    {
+      "name": "mskd",
+      "email": "jshd@gmail.com",
+      "password": "sddssdss",
+      "files": null,
+      "id": 25
+    },
+    {
+      "name": "nikita",
+      "email": "n@gmail.com",
+      "password": "nargis123",
+      "gender": "female",
+      "dob": "2023-05-09T18:30:00.000Z",
+      "address": "bhainsa tibba",
+      "phoneNumber": 9737627655,
+      "id": 26
+    }
+  ]
+}

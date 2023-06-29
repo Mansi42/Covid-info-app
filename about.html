@@ -1,0 +1,131 @@
+<head>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<body ng-controller="AboutController">
+  <nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <a class="navbar-brand"  style="color:white">COVID <i class="fa fa-plus-square" aria-hidden="true"></i></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#!home" ng-click="goToHome()">HOME <i class="fa-solid fa-face-mask"></i></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#!about" ng-click="goToAbout()">ABOUT</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#!details" ng-click="goToDetails()"
+            >DETAILS</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#!users" ng-click="goToUsers()">USERS</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#!form" ng-click="goToForm()">FORM</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#!" ng-click="goToLogin()"
+            >LOG OUT &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+      <!-- <div class="jumbotron">
+        <h4>When to isolate?</h4>
+        <div>
+          <span><i class="fa-solid fa-virus-covid-slash" aria-hidden="true"></i>If you test negative you can end your isolation</span>
+        
+&nbsp;&nbsp;&nbsp;
+        
+        <span> <i class="fa-solid fa-virus-covid"></i>
+         If you test positive follow all the precautions</span>
+        </div>
+
+      </div> -->
+  <div id="common">
+    <div id="symp">
+      <h6>Symptoms</h6>
+      <p>-Possible symptoms include:</p>
+
+      <p>-Fever or chills</p>
+      <p>-Fever or chills</p>
+      <p>-Shortness of breath or difficulty breathing</p>
+      <p>-Fatigue</p>
+      <p>-Muscle or body aches</p>
+      <p>-Headache</p>
+      <p>-New loss of taste or smell</p>
+      <p>-Sore throat</p>
+      <p>-Congestion or runny nose</p>
+      <p>-Nausea or vomiting</p>
+      <p>-Diarrhea</p>
+    </div>
+    <div id="precautions">
+      <h6>Precautions</h6>
+      <p>-Wear a mask properly</p>
+      <p>Make your environment safer</p>
+      <p>-Keep good hygiene</p>
+      <p>
+        -Regularly and thoroughly clean your hands with either an
+        alcohol-based hand rub or soap and water. This eliminates germs that
+        may be on your hands, including viruses.
+      </p>
+      <p>
+        -Avoid the 3Cs: spaces that are closed, crowded or involve close
+        contact.
+      </p>
+    </div>
+  </div>
+  <table class="table table-info table-hover" id="myTable">
+    <tr>
+      <td>Name Of Disease</td>
+      <td>Positive Count</td>
+      <td>Negative Count</td>
+      <td>Action</td>
+    </tr>
+    <tr ng-repeat="disease in diseases">
+      <td>{{disease.name}}</td>
+      <td>{{disease.positive}}</td>
+      <td>{{disease.negative}}</td>
+      <td>
+        <input
+          type="button"
+          value="Yes"
+          class="btn btn-danger"
+          ng-click="increasePositives(disease)"
+        />&nbsp;&nbsp;<input
+          type="button"
+          class="btn btn-danger"
+          value="No"
+          ng-click="increaseNegatives(disease)"
+        />&nbsp;&nbsp;
+        <input
+    type="button"
+    value="Generate PDF"
+    class="btn btn-danger"
+    ng-click="exportToPdf()"
+  />
+      </td>
+    </tr>
+  </table>
+  
+</div>
+</body>

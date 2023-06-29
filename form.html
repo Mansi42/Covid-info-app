@@ -1,0 +1,86 @@
+<head>
+  <script src="formController.js"></script>
+</head>
+<body ng-app="myApp">
+  <div ng-controller="formController">
+    <form ng-submit="uploadfiles(file)">
+      <input type="file" multiple ng-model="files" id="fileInput" />
+      <ul id="file-list" class="file-list"></ul>
+      <button type="submit">Upload</button>
+    </form>
+    <!-- 
+    <form name="myForm" enctype="multipart/form-data" novalidate>
+      <div class="form-group">
+        <h2>{{name}}</h2>
+        
+         <input
+          type="text"
+          name="name"
+          ng-model="name"
+          placeholder="Enter you name"
+          pattern="[a-zA-Z]{1,}"
+          required
+        /><br />
+        <span ng-show="myForm.$submitted || myForm.name.$dirty">
+          <span class="error" ng-show="myForm.name.$error.required"
+            ><i class="fa fa-info-circle" aria-hidden="true"></i>Name is
+            required</span
+          ><span class="error" ng-show="myForm.name.$error.pattern"
+            ><i class="fa fa-info-circle" aria-hidden="true"></i> Name is not a
+            number</span
+          ></span
+        >
+      </div>
+     
+      <div class="form-group">
+        <input
+          type="email"
+          name="email"
+          ng-model="user.email"
+          placeholder="Enter you email"
+          required
+        /><br />
+        <span ng-show="myForm.$submitted || myForm.email.$dirty">
+          <span class="error" ng-show="myForm.email.$error.required"
+            ><i class="fa fa-info-circle" aria-hidden="true"></i> email is
+            required</span
+          ><span class="error" ng-show="myForm.email.$error.email"
+            ><i class="fa fa-info-circle" aria-hidden="true"></i> email is
+            invalid</span
+          ></span
+        >
+      </div>
+      <div class="form-group">
+        <input
+          type="password"
+          name="password"
+          ng-model="user.password"
+          placeholder="Enter you password"
+          ng-minlength="8"
+          required
+        /><br />
+        <span ng-show="myForm.$submitted || myForm.password.$dirty">
+          <span class="error" ng-show="myForm.password.$error.required"
+            ><i class="fa fa-info-circle" aria-hidden="true"></i> password is
+            required</span
+          ><span class="error" ng-show="myForm.password.$error.minlength"
+            ><i class="fa fa-info-circle" aria-hidden="true"></i> password must
+            be of 8 digits</span
+          ></span
+        >
+      </div>  -->
+    <!-- <input type="file" id="file-input" multiple />
+        <ul id="file-list" class="file-list"></ul> -->
+
+    <!-- <div class="form-group">
+        <input type="file" ng-model="file" multiple/>
+      </div>  -->
+
+    <!-- <button type="submit" class="btn btn-primary info" ng-click="submitData(name,files)">Login</button
+      ><br /><br />  -->
+    <!-- </form>
+  </body>
+</html>  -->
+    <!-- </form> -->
+  </div>
+</body>

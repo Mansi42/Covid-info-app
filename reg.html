@@ -1,0 +1,165 @@
+<body class="reg">
+  <div ng-controller="RegisterController" class="login">
+    <div id="format1" class="wrapper1">
+      <form name="myForm" novalidate>
+        <h3>Registration Form</h3>
+        <div class="userform">
+          <md-input-container>
+            <label>Name</label>
+            <input
+              class="nameclass"
+              name="name"
+              type="text"
+              ng-model="name"
+              pattern="[a-zA-Z]{1,}"
+              required
+            />
+
+            <span ng-show="myForm.$submitted || myForm.name.$dirty">
+              <span class="error" ng-show="myForm.name.$error.required"
+                ><i class="fa fa-info-circle" aria-hidden="true"></i>Name is
+                required</span
+              ><span class="error" ng-show="myForm.name.$error.pattern"
+                ><i class="fa fa-info-circle" aria-hidden="true"></i> Name is
+                not a number</span
+              ></span
+            >
+          </md-input-container>
+          <br />
+          <md-input-container>
+            <label>Email</label>
+            <input type="text" ng-model="email" class="nameclass" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" required />
+
+            <span ng-show="myForm.$submitted || myForm.email.$dirty">
+              <span class="error" ng-show="myForm.email.$error.required"
+                ><i class="fa fa-info-circle" aria-hidden="true"></i> email is
+                required</span
+              ><span class="error" ng-show="myForm.email.$error.email"
+                ><i class="fa fa-info-circle" aria-hidden="true"></i> email is
+                invalid</span
+              ></span
+            >
+          </md-input-container>
+          <br />
+          <md-input-container>
+            <label>Password</label>
+            <input
+              class="nameclass"
+              name="password"
+              type="password"
+              ng-model="password"
+              ng-minlength="8"
+              required
+            />
+
+            <span ng-show="myForm.$submitted || myForm.password.$dirty">
+              <span class="error" ng-show="myForm.password.$error.required"
+                ><i class="fa fa-info-circle" aria-hidden="true"></i> password
+                is required</span
+              ><span class="error" ng-show="myForm.password.$error.minlength"
+                ><i class="fa fa-info-circle" aria-hidden="true"></i> password
+                must be of 8 digits</span
+              ></span
+            >
+          </md-input-container>
+          <br />
+          <md-radio-group>
+           
+            <input type="radio" ng-model="gender" class="nameclass" name="gender" ng-value="'male'" required />
+            <label class="nameclass">Male</label>
+          
+            <input type="radio" ng-model="gender" class="nameclass" name="gender" ng-value="'female'" required />
+            <label class="nameclass">Female</label>
+           
+          <span ng-show="myForm.$submitted || myForm.gender.$dirty">
+            <span class="error" ng-show="myForm.gender.$error.required"
+              ><i class="fa fa-info-circle" aria-hidden="true"></i> gender is
+              required</span
+            ></span
+          ></md-radio-group>
+          <br>
+
+          <md-input-container>
+            <label>Date</label>
+            <input type="date" ng-model="dob" class="nameclass" name="date" required />
+
+            <span ng-show="myForm.$submitted || myForm.date.$dirty">
+              <span class="error" ng-show="myForm.date.$error.required"
+                ><i class="fa fa-info-circle" aria-hidden="true"></i> Date is
+                required</span
+              ></span
+            >
+          </md-input-container>
+      
+          <br>
+          <md-input-container>
+            <label>Address</label>
+          <input
+            type="textarea"
+            name="address"
+            ng-model="address"
+            class="nameclass"
+            required
+          ></input
+          ><br />
+          <span ng-show="myForm.$submitted || myForm.address.$dirty">
+            <span class="error" ng-show="myForm.address.$error.required"
+              ><i class="fa fa-info-circle" aria-hidden="true"></i> Address is
+              required</span
+            ></span
+          ></md-input-container>
+     <br>
+          <md-input-container>
+            <label>PhoneNumber</label>
+            <input type="number" ng-model="phoneNumber" class="nameclass" name="phoneNumber" ng-maxlength="10"
+            ng-minlength="10" required ></input>
+
+          <span ng-show="myForm.$submitted || myForm.phoneNumber.$dirty">
+            <span class="error" ng-show="myForm.phoneNumber.$error.required"
+              ><i class="fa fa-info-circle" aria-hidden="true"></i> Phone Number
+              is required</span
+            ><span
+              class="error"
+              ng-show="((myForm.phoneNumber.$error.minlength || myForm.phoneNumber.$error.maxlength))"
+            >
+              Phone Number must be of 10 digits</span
+            ></span
+          ></md-input-container>
+      
+           <br>
+           <md-button
+             type="submit"
+             class="md-raised md-primary"
+             ng-click="postData(name,email,password,gender,dob,address,phoneNumber)">Register</md-button>
+       <br />
+  
+         
+          <a href="#!login" ng-click="goToLogin()"> Already have an account? Login Here</a>
+       
+      </form>
+    </div>
+    <br />
+    <br />
+
+    <!-- <table class="table table-dark table-hover" border="1">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Gender</th>
+        <th>DOB</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+      </tr>
+      <tr>
+        <td>{{Name}}</td>
+        <td>{{Email}}</td>
+        <td>{{Password}}</td>
+        <td>{{Gender}}</td>
+        <td>{{Dob}}</td>
+        <td>{{Address}}</td>
+        <td>{{PhoneNumber}}</td>
+      </tr>
+    </table> -->
+  </div>
+</body>

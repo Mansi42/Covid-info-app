@@ -1,0 +1,140 @@
+<body ng-controller="DetailController">
+  <nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <a class="navbar-brand" style="color: white"
+      >COVID <i class="fa fa-plus-square" aria-hidden="true"></i
+    ></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#!home" ng-click="goToHome()">HOME</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#!about" ng-click="goToAbout()">ABOUT</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#!details" ng-click="goToDetails()"
+            >DETAILS</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#!users" ng-click="goToUsers()">USERS</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#!form" ng-click="goToForm()">FORM</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#!" ng-click="goToLogin()"
+            >LOG OUT &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="jumbotron">
+    <h1 class="text-center">{{title}}</h1>
+    <p>
+      The Covid-19 pandemic has been a deadly pandemic that has affected the
+      whole world. It was a viral infection that affected almost everyone in
+      some way or the other. However, the effects have been felt differently
+      depending on various factors. As it is a virus, it will change with time,
+      and different variants might keep coming. The virus has affected the
+      lifestyle of human beings. The pandemic has affected the education system
+      and the economy of the world as well. Many people have lost their lives,
+      jobs, near and dear, etc.
+    </p>
+    <canvas id="myChart" height="60px"></canvas>
+
+    <div id="cards">
+      <div class="row">
+        <div class="col-nd-4">
+          <div class="card">
+            <div class="card-body">
+              <h3>Total Cases</h3>
+              <table class="table table-info">
+                <tr>
+                  <th>Date</th>
+                  <th>count of total cases</th>
+                </tr>
+                <tr ng-repeat="x in all_data | limitTo:10">
+                  <td>{{x.date}}</td>
+                  <td>{{x.totalTestResults }}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="col-nd-4">
+          <div class="card">
+            <div class="card-body">
+              <h3>Positive Cases</h3>
+              <table class="table table-success">
+                <tr>
+                  <th>Date</th>
+                  <th>count of Positive cases</th>
+                </tr>
+                <tr ng-repeat="x in all_data | limitTo:10">
+                  <td>{{x.date}}</td>
+                  <td>{{x.positive}}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="col-nd-4">
+          <div class="card">
+            <div class="card-body">
+              <h3>Negative Cases</h3>
+              <table class="table table-danger">
+                <tr>
+                  <th>Date</th>
+                  <th>count of Negative cases</th>
+                </tr>
+                <tr ng-repeat="x in all_data | limitTo:10">
+                  <td>{{x.date}}</td>
+                  <td>{{x.negative}}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="col-nd-4">
+          <div class="card">
+            <div class="card-body">
+              <h3>Death Cases</h3>
+              <table class="table table-info">
+                <tr>
+                  <th>Date</th>
+                  <th>count of Death cases</th>
+                </tr>
+                <tr ng-repeat="x in all_data | limitTo:10">
+                  <td>{{x.date}}</td>
+                  <td>{{x.death}}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

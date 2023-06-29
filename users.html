@@ -1,0 +1,311 @@
+<body ng-controller="UsersController">
+  <nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <a class="navbar-brand"  style="color:white">COVID <i class="fa fa-plus-square" aria-hidden="true"></i></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#!home" ng-click="goToHome()">HOME</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#!about" ng-click="goToAbout()">ABOUT</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#!details" ng-click="goToDetails()"
+            >DETAILS</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#!users" ng-click="goToUsers()">USERS</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#!form" ng-click="goToForm()">FORM</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#!" ng-click="goToLogin()"
+            >LOG OUT &nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<!--    
+      <h4 style:{justify-content:center}>
+        Do you want to get Appointment for vaccination?
+      </h4> -->
+      <div class="fulldiv">
+        <form name="myForm" class="vaccineform" novalidate >
+          <h4 style="color:rgb(37, 14, 110)">Get appointment for vaccination</h4>
+          <div class="userform">
+            <md-input-container>
+              <label>Id</label>
+              <input
+                class="nameclass"
+                name="id"
+                type="text"
+                ng-model="id"
+                required
+              />
+  
+              <span ng-show="myForm.$submitted || myForm.id.$dirty">
+                <span class="error" ng-show="myForm.id.$error.required"
+                  ><i class="fa fa-info-circle" aria-hidden="true"></i>Name is
+                  required</span
+                ><span class="error" ng-show="myForm.id.$error.pattern"
+                  ><i class="fa fa-info-circle" aria-hidden="true"></i> Name is
+                  not a number</span
+                ></span
+              >
+            </md-input-container>
+            <br />
+            <md-input-container>
+              <label>Name</label>
+              <input
+                class="nameclass"
+                name="name"
+                type="text"
+                ng-model="name"
+                pattern="[A-Za-z]{1,32}"
+                required
+              />
+  
+              <span ng-show="myForm.$submitted || myForm.name.$dirty">
+                <span class="error" ng-show="myForm.name.$error.required"
+                  ><i class="fa fa-info-circle" aria-hidden="true"></i>Name is
+                  required</span
+                ><span class="error" ng-show="myForm.name.$error.pattern"
+                  ><i class="fa fa-info-circle" aria-hidden="true"></i> Name is
+                  not a number</span
+                ></span
+              >
+            </md-input-container>
+            <br />
+            <md-input-container>
+              <label>Email</label>
+              <input type="text" ng-model="email" class="nameclass" name="email" required />
+  
+              <span ng-show="myForm.$submitted || myForm.email.$dirty">
+                <span class="error" ng-show="myForm.email.$error.required"
+                  ><i class="fa fa-info-circle" aria-hidden="true"></i> email is
+                  required</span
+                ><span class="error" ng-show="myForm.email.$error.email"
+                  ><i class="fa fa-info-circle" aria-hidden="true"></i> email is
+                  invalid</span
+                ></span
+              >
+            </md-input-container>
+            <br />
+            <md-input-container>
+              <label>Password</label>
+              <input
+                class="nameclass"
+                name="password"
+                type="password"
+                ng-model="password"
+                ng-minlength="8"
+                required
+              />
+  
+              <span ng-show="myForm.$submitted || myForm.password.$dirty">
+                <span class="error" ng-show="myForm.password.$error.required"
+                  ><i class="fa fa-info-circle" aria-hidden="true"></i> password
+                  is required</span
+                ><span class="error" ng-show="myForm.password.$error.minlength"
+                  ><i class="fa fa-info-circle" aria-hidden="true"></i> password
+                  must be of 8 digits</span
+                ></span
+              >
+            </md-input-container>
+            <br />
+            <md-radio-group>
+             
+              <input type="radio" ng-model="gender" class="nameclass" name="gender" ng-value="'male'" required />
+              <label class="nameclass">Male</label>
+            
+              <input type="radio" ng-model="gender" class="nameclass" name="gender" ng-value="'female'" required />
+              <label class="nameclass">Female</label>
+             
+            <span ng-show="myForm.$submitted || myForm.gender.$dirty">
+              <span class="error" ng-show="myForm.gender.$error.required"
+                ><i class="fa fa-info-circle" aria-hidden="true"></i> gender is
+                required</span
+              ></span
+            ></md-radio-group>
+            <br>
+  
+            <md-input-container>
+              <label>Date</label>
+              <input type="date |date: 'dd-MM-yyyy'" ng-model="dod" class="nameclass" name="date" required />
+  
+              <span ng-show="myForm.$submitted || myForm.date.$dirty">
+                <span class="error" ng-show="myForm.date.$error.required"
+                  ><i class="fa fa-info-circle" aria-hidden="true"></i> Date is
+                  required</span
+                ></span
+              >
+            </md-input-container>
+        
+            <br>
+            <md-input-container>
+              <label>Address</label>
+            <input
+              type="textarea"
+              name="address"
+              ng-model="address"
+              class="nameclass"
+              required
+            ></input
+            ><br />
+            <span ng-show="myForm.$submitted || myForm.address.$dirty">
+              <span class="error" ng-show="myForm.address.$error.required"
+                ><i class="fa fa-info-circle" aria-hidden="true"></i> Address is
+                required</span
+              ></span
+            ></md-input-container>
+       <br>
+            <md-input-container>
+              <label>PhoneNumber</label>
+              <input type="number" ng-model="phoneNumber" class="nameclass" name="phoneNumber" ng-maxlength="10"
+              ng-minlength="10" required ></input>
+  
+            <span ng-show="myForm.$submitted || myForm.phoneNumber.$dirty">
+              <span class="error" ng-show="myForm.phoneNumber.$error.required"
+                ><i class="fa fa-info-circle" aria-hidden="true"></i> Phone Number
+                is required</span
+              ><span
+                class="error"
+                ng-show="((myForm.phoneNumber.$error.minlength || myForm.phoneNumber.$error.maxlength))"
+              >
+                Phone Number must be of 10 digits</span
+              ></span
+            ></md-input-container>
+        <br>
+            <md-input-container>
+              <label class="nameclass">Choose Vaccine</label>
+              <md-select ng-model="vaccineName" placeholder="VaccineName" class="nameclass" required
+                   md-no-asterisk="false">
+       
+          <md-option value="Sputnik" class="nameclass" ng-model="vaccineName">Sputnik</md-option>
+          <md-option value="Covaxin" class="nameclass" ng-model="vaccineName">Covaxin</md-option>
+          <md-option value="Covishield" class="nameclass" ng-model="vaccineName">Covishield</md-option>
+        </md-select>
+              <!-- <md-select ng-model="vaccineName"  class="nameclass" name="vaccineName" required>
+             
+                  <md-option ng-value="Sputnik" class="nameclass" ng-model="vaccineName">Sputnik</md-option>
+                  <md-option ng-value="Covaxin" class="nameclass" ng-model="vaccineName">Covaxin</md-option>
+                  <md-option ng-value="Covishield" class="nameclass" ng-model="vaccineName">Covishield</md-option>
+        
+              </md-select> -->
+            </md-input-container>
+  
+            <span ng-show="myForm.$submitted || myForm.vaccineName.$dirty">
+              <span class="error" ng-show="myForm.vaccineName.$error.required"
+                ><i class="fa fa-info-circle" aria-hidden="true"></i> Vaccine 
+                name is required</span
+              ></span
+            >
+            <br><br>
+            <md-radio-group>
+             
+              <input type="radio" ng-model="vstatus" class="nameclass" name="vstatus" ng-value="'Dose1'" required />
+              <label class="nameclass">Dose1</label>
+            
+              <input type="radio" ng-model="vstatus" class="nameclass" name="vstatus" ng-value="'Dose2'" required />
+              <label class="nameclass">Dose2</label>
+             
+            <span ng-show="myForm.$submitted || myForm.vstatus.$dirty">
+              <span class="error" ng-show="myForm.vstatus.$error.required"
+                ><i class="fa fa-info-circle" aria-hidden="true"></i> Vaccine Status is
+                required</span
+              ></span
+            ></md-radio-group>
+         
+           
+  <br>
+           <md-button
+            type="submit"
+            class="md-raised md-accent"
+            ng-click="saveData(id,name,email,password,gender,dod,address,phoneNumber,vaccineName,vstatus,oldid)"
+            >
+            Save
+          </md-button> 
+     
+          <br /><br />
+         </div>
+        </form>
+      </div>
+      <br />
+      <br />
+      <button
+        type="submit"
+        class="btn btn-danger"
+        ng-click="showUsers(id,name,email,password,gender,dod,address,phoneNumber,vaccineName,vstatus)"
+      >
+        Show Users
+      </button>
+     
+      <input type="text" placeholder="Search here" ng-model="search" />
+      <input type="checkbox" ng-model="check" >Hide Table</input>
+ 
+      <table class="table table-dark table-hover" border="1">
+        <tr>
+            <th>Id</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>Gender</th>
+          <th>Date of Dose</th>
+          <th>Address</th>
+          <th>Phone Number</th>
+          <th>Vaccine Name</th>
+          <th>Vaccine Status</th>
+        
+          <th>Actions</th>
+        </tr>
+        <tr ng-animate="'animate"  ng-repeat="item in appointusers | filter:search" ng-hide="check"" 
+        
+         >
+            <td>{{item.id}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.email}}</td>
+          <td>{{item.password}}</td>
+          <td>{{item.gender}}</td>
+          <td>{{item.dod}}</td>
+          <td>{{item.address}}</td>
+          <td>{{item.phoneNumber}}</td>
+          <td>{{item.vaccineName}}</td>
+          <td>{{item.vstatus}}</td>
+        
+          <td>
+            &nbsp;&nbsp;<br><br>
+            <button
+              type="submit"
+              class="btn btn-danger"
+              ng-click="Deletebtn(item.id)"
+            >
+              Delete
+            </button>
+          
+            <button type="submit" class="btn btn-danger" ng-click="Editbtn(item.id)">
+              Edit</button
+            >
+          </td>
+        </tr>
+      </table>
+
+</body>

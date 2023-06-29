@@ -1,0 +1,64 @@
+{
+  "appUsers": [
+    {
+      "id": "12",
+      "name": "shiffali",
+      "email": "shiffali@gmail.com",
+      "password": "shiffali@123",
+      "gender": "Female",
+      "dod": "2023-05-08T18:30:00.000Z",
+      "address": "uhgsdyuhbshd",
+      "phoneNumber": 8376423528,
+      "vaccineName": "Covishield",
+      "vstatus": "dose1"
+    },
+    {
+      "name": "rishu",
+      "email": "rishu@gmail.com",
+      "password": "rishu@123",
+      "gender": "male",
+      "dod": "2023-05-08T18:30:00.000Z",
+      "address": "uhgsdyuhbshd",
+      "phoneNumber": 8376423528,
+      "vaccineName": "Sputnik",
+      "vstatus": "Dose1",
+      "id": "vwoL1ou"
+    },
+    {
+      "id": "66",
+      "name": "sahil",
+      "email": "sahil@gmail.com",
+      "password": "sahil123",
+      "gender": "Male",
+      "dod": "24 may",
+      "address": "chandigarh",
+      "phoneNumber": 9876543461,
+      "vaccineName": "Covaxin",
+      "vstatus": "Dose1"
+    },
+    {
+      "id": "78",
+      "name": "mani",
+      "email": "m@gmail.com",
+      "password": "fdfddfdfd",
+      "gender": "Female",
+      "dod": "df",
+      "address": "dfd",
+      "phoneNumber": 3245678755,
+      "vaccineName": "Covaxin",
+      "vstatus": "Dose2"
+    },
+    {
+      "id": "56",
+      "name": "ashrey",
+      "email": "ashrey@gmail.com",
+      "password": "ashrey123",
+      "gender": "male",
+      "dod": "09 march",
+      "address": "una",
+      "phoneNumber": 9813267543,
+      "vaccineName": "Covishield",
+      "vstatus": "Dose2"
+    }
+  ]
+}

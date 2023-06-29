@@ -1,0 +1,87 @@
+<body>
+  <div ng-controller="LoginController" class="login">
+    <div id="format1" class="wrapper">
+      <form name="myForm" novalidate>
+        <h3>Login Form</h3>
+        <div class="userform">
+          <md-input-container>
+            <label>Name</label>
+            <input
+              class="nameclass"
+              type="text"
+              name="name"
+              ng-model="name"
+              pattern="[a-zA-Z]{1,}"
+              required
+            />
+
+            <span ng-show="myForm.$submitted || myForm.name.$dirty">
+              <span class="error" ng-show="myForm.name.$error.required"
+                ><i class="fa fa-info-circle" aria-hidden="true"></i>Name is
+                required</span
+              ><span class="error" ng-show="myForm.name.$error.pattern"
+                ><i class="fa fa-info-circle" aria-hidden="true"></i> Name is
+                not a number</span
+              ></span
+            >
+          </md-input-container>
+          <br />
+          <md-input-container>
+            <label>Email</label>
+            <input
+              type="text"
+              ng-model="email"
+              class="nameclass"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+              name="email"
+              required
+            />
+
+            <span ng-show="myForm.$submitted || myForm.email.$dirty">
+              <span class="error" ng-show="myForm.email.$error.required"
+                ><i class="fa fa-info-circle" aria-hidden="true"></i> email is
+                required</span
+              ><span class="error" ng-show="myForm.email.$error.pattern"
+                ><i class="fa fa-info-circle" aria-hidden="true"></i> email is
+                invalid</span
+              ></span
+            >
+          </md-input-container>
+          <br />
+          <md-input-container>
+            <label>Password</label>
+            <input
+              class="nameclass"
+              type="password"
+              name="password"
+              ng-model="password"
+              ng-minlength="8"
+              required
+            />
+
+            <span ng-show="myForm.$submitted || myForm.password.$dirty">
+              <span class="error" ng-show="myForm.password.$error.required"
+                ><i class="fa fa-info-circle" aria-hidden="true"></i> password
+                is required</span
+              ><span class="error" ng-show="myForm.password.$error.minlength"
+                ><i class="fa fa-info-circle" aria-hidden="true"></i> password
+                must be of 8 digits</span
+              ></span
+            >
+          </md-input-container>
+          <br />
+          <md-button
+            type="submit"
+            class="md-raised md-primary"
+            ng-click="login(email,password)"
+            >Login</md-button
+          >
+          <br />
+          <a href="#!" ng-click="goToMain()">Main</a>
+          <a href="#!register" ng-click="goToRegister()">New User? Register</a>
+        </div>
+      </form>
+    </div>
+    <!-- <h2>{{message}}</h2> -->
+  </div>
+</body>

@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "angular": "^1.8.3",
+    "angular-chart.js": "^1.1.1",
+    "angular-file-upload": "^2.6.1",
+    "angular-upload-file": "^1.1.6",
+    "formdata-polyfill": "^4.0.10",
+    "ng-file-upload": "^12.2.13"
+  }
+}
